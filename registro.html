@@ -80,8 +80,8 @@
     <section class="seccion contenedor">
         <h2>registro de usuarios</h2>
 
-        <form id="registro" action="index.html" method="POST">
-            <div id="datos usuario" class="registro caja">
+        <form class="registro" id="registro" action="index.html" method="POST">
+            <div id="datos-usuario" class="caja">
                 <div class="campo">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -112,8 +112,8 @@
                         </ul>
 
                         <div class="orden">
-                            <label for="1Dia">Boletos deseados</label>
-                            <input type="number" id="1Dia" placeholder="0" size="3" min="0" >
+                            <label for="pase_dia">Boletos deseados</label>
+                            <input type="number" id="pase_dia" placeholder="0" size="3" min="0">
                         </div>
 
                     </div>
@@ -126,14 +126,14 @@
                             <li><i class="fas fa-check"></i>todos los talleres</li>
                         </ul>
                         <div class="orden">
-                            <label for="todosDias">Boletos deseados</label>
-                            <input type="number" id="todosDias" placeholder="0" size="3" min="0" >
+                            <label for="pase_completo">Boletos deseados</label>
+                            <input type="number" id="pase_completo" placeholder="0" size="3" min="0">
                         </div>
 
                     </div>
 
                     <div class="tabla-precio">
-                        <h3>Pase por 2 dias(viernes y sábados</h3>
+                        <h3>Pase por 2 dias(viernes y sábados)</h3>
                         <p class="numero">$45</p>
                         <ul>
                             <li><i class="fas fa-check"></i>Bocadillos gratis</li>
@@ -142,8 +142,8 @@
                         </ul>
 
                         <div class="orden">
-                            <label for="2Dias">Boletos deseados</label>
-                            <input type="number" id="2Dias" placeholder="0" size="3" min="0" >
+                            <label for="pase_dosDias">Boletos deseados</label>
+                            <input type="number" id="pase_dosDias" placeholder="0" size="3" min="0">
                         </div>
 
                     </div>
@@ -153,11 +153,236 @@
             <div id="talleres" class="talleres">
                 <h3>elige tus talleres</h3>
 
+                <div class="caja columna-talleres">
+
+                    <div id="viernes" class="contenido-dia clearfix">
+                        <h4>viernes</h4>
+
+
+                        <div class="dias-grid">
+                            <div class="seminarios-talleres">
+                                <p>Seminario</p>
+
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="10" value="10">
+                                    <time>10:00:00</time> Diseño UI y UX para móviles <br>
+                                    <span class="autor">Susan Sanchez</span>
+                                </label>
+                            </div>
+
+                            <div class="seminarios-talleres">
+                                <p>Conferencias</p>
+
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="8" value="8">
+                                    <time>05:00:00</time> Tecnologías del Futuro PHP <br>
+                                    <span class="autor">Juan Sanchez</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="9" value="9">
+                                    <time>07:00:00</time> Seguridad en la Web <br>
+                                    <span class="autor">Shari Herrera</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="7" value="7">
+                                    <time>10:00:00</time> Como ser freelancer <br>
+                                    <span class="autor">Susan Sanchez</span>
+                                </label>
+                            </div>
+
+                            <div class="seminarios-talleres">
+                                <p>Talleres</p>
+
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="4" value="4">
+                                    <time>02:00:00</time> HTML5 y CSS3 <br>
+                                    <span class="autor">Juan Sanchez</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="registro[]" id="6" value="6">
+                                    <time>19:00:00</time> WordPress <br>
+                                    <span class="autor">Harold Garcia</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--.contenido-dia -->
+                    <div id="sabado" class="contenido-dia clearfix">
+                        <h4>sábado</h4>
+
+                        <div class="dias-grid">
+                        <div class="seminarios-talleres">
+                            <p>Seminario</p>
+
+                            <label>
+                                <input type="checkbox" name="registro[]" id="21" value="21">
+                                <time>17:00:00</time> Diseño UI y UX para móviles <br>
+                                <span class="autor">Harold Garcia</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="11" value="11">
+                                <time>19:00:00</time> Angular 5 <br>
+                                <span class="autor">Juan Sanchez</span>
+                            </label>
+                        </div>
+
+                        <div class="seminarios-talleres">
+                            <p>Conferencias</p>
+
+                            <label>
+                                <input type="checkbox" name="registro[]" id="17" value="17">
+                                <time>10:00:00</time> Como crear una tienda online que venda millones en pocos día <br>
+                                <span class="autor">Susan Sanchez</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="32" value="32">
+                                <time>11:00:00</time> Flexbox para principiantes <br>
+                                <span class="autor">Susana Rivera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="18" value="18">
+                                <time>17:00:00</time> Los mejores lugares para encontrar trabajo <br>
+                                <span class="autor">Rafael Bautista</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="19" value="19">
+                                <time>19:00:00</time> Pasos para crear un negocio rentable <br>
+                                <span class="autor">Shari Herrera</span>
+                            </label>
+                        </div>
+
+                        <div class="seminarios-talleres">
+                            <p>Talleres</p>
+
+                            <label>
+                                <input type="checkbox" name="registro[]" id="12" value="12">
+                                <time>12:00:00</time> PHP y MySQL <br>
+                                <span class="autor">Shari Herrera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="13" value="13">
+                                <time>14:00:00</time> JavaScript Avanzado <br>
+                                <span class="autor">Juan Sanchez</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="14" value="14">
+                                <time>17:00:00</time> SEO en Google <br>
+                                <span class="autor">Susana Rivera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="15" value="15">
+                                <time>19:00:00</time> De Photoshop a HTML5 y CSS3 <br>
+                                <span class="autor">Harold Garcia</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="16" value="16">
+                                <time>21:00:00</time> PHP Intermedio y Avanzado <br>
+                                <span class="autor">Susan Sanchez</span>
+                            </label>
+                        </div>
+                    </div>
+                    </div>
+                    <!--.contenido-dia -->
+                    <div id="domingo" class="contenido-dia clearfix">
+                        <h4>domingo</h4>
+
+                        <div class="dias-grid">
+                        <div class="seminarios-talleres">
+                            <p>Seminario</p>
+
+                            <label>
+                                <input type="checkbox" name="registro[]" id="30" value="30">
+                                <time>10:00:00</time> Creando una App en Android en una mañana <br>
+                                <span class="autor">Susana Rivera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="31" value="31">
+                                <time>17:00:00</time> Creando una App en iOS en una tarde <br>
+                                <span class="autor">Rafael Bautista</span>
+                            </label>
+                        </div>
+
+                        <div class="seminarios-talleres">
+                            <p>Talleres</p>
+
+                            <label>
+                                <input type="checkbox" name="registro[]" id="22" value="22">
+                                <time>10:00:00</time> Laravel <br>
+                                <span class="autor">Rafael Bautista</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="23" value="23">
+                                <time>12:00:00</time> Crea tu propia API <br>
+                                <span class="autor">Shari Herrera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="24" value="24">
+                                <time>14:00:00</time> JavaScript y jQuery <br>
+                                <span class="autor">Juan Sanchez</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="25" value="25">
+                                <time>17:00:00</time> Creando Plantillas para WordPress <br>
+                                <span class="autor">Susana Rivera</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="registro[]" id="26" value="26">
+                                <time>19:00:00</time> Tiendas Virtuales en Magento <br>
+                                <span class="autor">Harold Garcia</span>
+                            </label>
+                        </div>
+                    </div>
+                    </div>
+                    <!--.contenido-dia -->
+                </div>
+                <!--.caja-->
+
             </div>
             <!--Talleres-->
 
-            <div id="pago" class="pago">
+            <div id="resumen" class="resumen">
                 <h3>pago y extras</h3>
+                <div class="caja">
+                    <div class="extras">
+                        <div class="orden">
+                            <label for="camisa_evento">Camisa del evento <small>(promocion 7% de
+                                    descuento)</small></label>
+                            <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+                        </div>
+
+                        <div class="orden">
+                            <label for="Sticker">Paquete de 10 Sticker $2 <small>(HTML5, CSS3, JavaScript,
+                                    Chrome)</small></label>
+                            <input type="number" min="0" id="Sticker" size="3" placeholder="0">
+                        </div>
+
+                        <div class="orden">
+                            <label for="regalo">Seleccione un regalo</label>
+                            <select name="" id="regalo" required>
+                                <option value="">--Selecione un regalo--</option>
+                                <option value="Sticker">Sticker</option>
+                                <option value="pulsera">Pulsera</option>
+                                <option value="birome">Birome</option>
+                            </select>
+                        </div>
+
+                        <input class="boton" type="button" value="Calcular">
+
+                    </div>
+                    <!--Cierre Extras-->
+
+                    <div class="total">
+                        <p>RESUMEN:</p>
+                        <div id="lista-productos">
+
+                        </div>
+                        <P>TOTAL:</P>
+                        <div id="suma-total">
+
+                        </div>
+                        <input id="boton-registro" class="boton" type="submit" value="pagar">
+                    </div>
+                </div>
 
             </div>
             <!--Pagos y extras-->

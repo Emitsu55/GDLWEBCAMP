@@ -162,12 +162,13 @@ h2 {
 h3 {
   font-family: var(--fuentePTSans);
   font-size: 3rem;
-  margin: 0 0 0 2rem;
+  margin: 2rem 0 0 0rem;
   color: var(--colorPrincipal);
 }
 
 
 .boton {
+  border: none;
   display: inline-block;
   text-decoration: none;
   padding: 1rem 4rem;
@@ -907,15 +908,117 @@ h3 {
 
 /* REGISTRO */
 
-.registro {
+.caja {
   background-color: #ffffff;
   border: 1px solid rgb(199, 199, 199);
   padding: 3rem 2rem;
-  font-family: var(--fuentePTSans);
-  font-weight: bold;
-  display: flex;
-  justify-content: space-around;
 }
+
+@media (min-width: 768px) {
+  .caja {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.registro label {
+  font-weight: bold;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--fuentePTSans);
+}
+
+h4{
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  font-size: 1.2em;
+  padding-bottom: 1rem;
+}
+
+.paquetes .tabla-precio:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.paquetes .tabla-precio input {
+  clear: both;
+  width: 70px;
+  margin: 1rem auto 0 auto;
+  display: block;
+}
+
+.columna-talleres {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .dias-grid {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.seminarios-talleres {
+  display: grid;
+  flex-basis: 33.3%;
+  text-align: center;
+
+}
+
+.seminarios-talleres p {
+  color: var(--colorPrincipal);
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .seminarios-talleres,
+  .seminarios-talleres p {
+    text-align: left;
+  }
+}
+
+.contenido-dia label {
+  font-weight: initial;
+}
+
+.contenido-dia label time {
+  font-weight: bold;
+  color: var(--colorPrincipal);
+}
+
+.extras {
+  display: grid;
+  row-gap: 2rem;
+  text-align: center
+}
+
+@media (min-width: 768px) {
+  .extras {
+    display: block;
+    text-align: inherit;
+  }
+  .extras input,
+  .extras select{
+    clear: both;
+    width: min-content;
+    margin: 1rem auto 1rem 0;
+    display: block;
+  }
+}
+
+.extras .boton {
+  margin: 0 auto;
+}
+
+.orden small {
+  font-weight: initial;
+}
+
+.total {
+  text-align: center;
+}
+
 
 /* ==========================================================================
    Helper classes
