@@ -960,7 +960,8 @@ h4{
 }
 
 .seminarios-talleres {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   flex-basis: 33.3%;
   text-align: center;
 
